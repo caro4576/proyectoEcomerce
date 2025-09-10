@@ -1,0 +1,216 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #891190;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #FFF;
+
+    --fuentePrincipal: 'Staatliches', sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 80%;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    background-color: var(--primario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 20px;
+
+}
+
+h1 {
+    font-size: size 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+#productos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto {
+    background: var(--primarioOscuro);
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--primario);
+    padding: 1rem;
+}
+
+.producto:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.producto img {
+    max-width: 90%;
+    border-radius: 5px;
+}
+
+.producto h3,
+P {
+    color: var(--blanco);
+
+}
+
+#detalle {
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 20px;
+
+}
+
+#lista-carrito {
+    margin-top: 20px;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+#contador-carrito {
+    transition: transform 0.2s ease;
+}
+
+#contador-carrito.agregado {
+    transform: scale(1.5);
+    color: var(--secundario);
+}
+
+button {
+    background: var(--secundario);
+    border: none;
+    padding: 8px 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--secundarioOscuro);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 3rem;
+
+}
+
+span {
+    font-size: 3rem;
+    color: var(--blanco);
+}
+
+footer {
+    color: var(--blanco);
+    margin-top: auto;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+/*media queries*/
+/* Tabletas */
+@media (max-width: 1200px) {
+    .contenedor {
+        padding: 0 2rem;
+    }
+
+    #productos {
+        gap: 15px;
+    }
+
+    .producto {
+        width: 180px;
+        padding: 12px;
+    }
+
+
+    h1,
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    a,
+    span {
+        font-size: 2.5rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+
+    #productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    h1,
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 1.4rem;
+    }
+
+    a,
+    span {
+        font-size: 2rem;
+    }
+}

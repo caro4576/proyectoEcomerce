@@ -1,0 +1,37 @@
+🛍️ E-commerce Básico
+
+Este es un proyecto de un sitio de e-commerce básico y funcional, creado con HTML, CSS y JavaScript .
+El objetivo principal es mostrar cómo se pueden aplicar conceptos clave de desarrollo web como la manipulación del DOM, la gestión de datos asíncrona (AJAX) y la persistencia de datos del lado del cliente (`localStorage`) para construir una tienda virtual sencilla pero interactiva.
+
+✨ Características Principales
+
+- Ver un listado de productos.
+- Agregar productos al carrito de compras.
+- Eliminar productos del carrito.
+- Guardar la información en el **LocalStorage** para persistencia.
+- Visualizar los productos en detalle.
+
+🛠️ Tecnologías Utilizadas
+
+- **HTML5**: Para la estructura del contenido.
+- **CSS3**: Para el estilo y el diseño de la interfaz de usuario.
+- **JavaScript**: Para toda la lógica de la aplicación, incluyendo la manipulación del DOM, las peticiones `fetch`, y la gestión del estado del carrito.
+
+📂 Estructura del Proyecto
+
+ecommerce/
+│── index.html # Página principal
+│── producto.html # Detalle de producto
+│── carrito.html # Carrito de compras
+│── app.js # Lógica en JavaScript
+│── productos.json # Base de datos simulada de productos
+│── style.css # Estilos del sitio
+│── img/ # Imágenes de productos
+
+📦 Carrito de compras
+-Se guarda en localStorage para mantener los datos aunque el usuario cierre la página.
+-Se puede agregar y eliminar productos dinámicamente.
+-Se actualiza el contador de productos en el carrito.
+
+👩‍💻 Autor
+Proyecto realizado por Carolina Bibbo como práctica de desarrollo web.
