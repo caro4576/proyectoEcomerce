@@ -3,7 +3,7 @@
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-//logica de la aplicación
+
 
 // Cargar productos desde JSON
 function cargarProductos() {
@@ -69,7 +69,7 @@ async function comprar() {
 }
 
 
-//manipulación del DOM
+
 
 
 // Mostrar productos en el index.html
@@ -137,7 +137,7 @@ function cargarDetalleProducto() {
     .then(productos => {
       const id = localStorage.getItem("productoSeleccionado");
       const producto = productos.find(p => p.id == id);
-      if (!producto) return; // Si no se encuentra el producto, salir
+      if (!producto) return; 
 
       document.getElementById("detalle").innerHTML = `
         <h2>${producto.nombre}</h2>
