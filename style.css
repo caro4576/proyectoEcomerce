@@ -37,6 +37,23 @@ body {
     padding: 2rem;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header__logo {
+    max-width: 120px;
+}
+
+.header__titulo {
+    font-size: 3rem;
+    text-align: center;
+    flex: 1;
+}
+
 h1,
 h2,
 h3 {
@@ -47,7 +64,7 @@ h3 {
 }
 
 h1 {
-    font-size: size 4rem;
+    font-size: 4rem;
 }
 
 h2 {
@@ -152,11 +169,29 @@ footer {
 
 }
 
+
+/* Evitar scroll horizontal en móviles */
+body {
+    overflow-x: hidden;
+}
+
 /*media queries*/
 /* Tabletas */
 @media (max-width: 1200px) {
     .contenedor {
         padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header__titulo {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
     }
 
     #productos {
@@ -168,8 +203,14 @@ footer {
         padding: 12px;
     }
 
+    h1 {
+        font-size: 3rem;
+    }
 
-    h1,
+    h2 {
+        font-size: 2.8rem;
+    }
+
     h3 {
         font-size: 2.4rem;
     }
@@ -198,10 +239,23 @@ footer {
         padding: 10px;
     }
 
-    h1,
-    h3 {
-        font-size: 2rem;
+    h1 {
+        font-size: 2.4rem;
         margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    p,
+    #detalle {
+        font-size: 1.6rem;
     }
 
     button {
@@ -212,5 +266,10 @@ footer {
     a,
     span {
         font-size: 2rem;
+    }
+
+    footer h4 {
+        font-size: 1.4rem;
+        line-height: 1.6;
     }
 }
